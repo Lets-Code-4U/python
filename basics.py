@@ -52,3 +52,37 @@ print(tuple)
 
 dict = {"name": "Sarvesh Mishra", "roll": 52, "marks": 96, "result": True}
 print(dict)
+
+
+print("\n")
+
+# Type casting in python
+# The convedrsion of data type form one to another is termed as typecasting
+# There are two types: Explicit(Done by user manually) and Implicit(Done by python interpreter automatically
+
+a = "5"
+b = "7"
+c = 3
+d = 4.6
+print(a + b)  # a and b are considered as string and they are treated as string
+print(int(a) + int(b))  # both a and b are converted to int (Explicit Typecasting)
+print(
+    c + d
+)  # c is int and d is float so c is also converted to float (Implicit Typecasting)
+
+
+# Taking user input in python
+# input() function is used to take user input
+
+
+name = input("\nEnter you name : ")
+print("\nMy name is : ", name)
+
+# The input() function stores the entered value in the form of string
+# so we need to typecast if we need any other data type
+
+first = input("Enter the first number :")
+second = input("Enter the second number :")
+
+print(first + second)  # here both the variable are treated as strings
+print(int(first) + int(second))  # here it is typecasted to integer
