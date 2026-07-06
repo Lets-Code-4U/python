@@ -48,6 +48,8 @@ print(text.endswith("is", 2, 12))  # checks the ending string within the index (
 print(text.startswith("This"))  # returns true if the text starts with passed string
 print(text.startswith("is", 4, 12))  # checks for the given indes range only
 
+
+
 text = "apple, banana, guava, mango, cherry"
 
 print(text.split(","))  # splits text by finding the passed string & returns list
