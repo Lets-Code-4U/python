@@ -47,3 +47,13 @@ is_weekend = True
 is_holiday = False
 if is_weekend or is_holiday:
     print("Hurray !!")
+
+
+# Short hand or Ternary operator
+
+result = "Adult" if age >= 18 else "Minor"
+# result will be adult if age>= 18 else it will be minor
+print(result)
+
+
+
