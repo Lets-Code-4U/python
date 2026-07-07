@@ -57,3 +57,35 @@ print(result)
 
 
 
+# Match case
+# it looks to the variable and matches it to the case it fits
+
+# day is the variable and 1,2,3 are cases to matched with the day
+day = 3
+
+match day:
+    case 1:
+        print("Monday")
+    case 2:
+        print("Tuesday")
+    case 3:
+        print("Wednesday")  # This is the one that will execute!
+    case _:
+        print("Invalid day number")
+
+# case_  is the default case
+import random
+
+device_list = ["iphone14", "samsungs24", "vivo23", "iphone13"]
+device = device_list[random.randint(0, 3)]
+
+match device:
+    case "iphone14" | "iphone13":
+        operating_system = "ios"
+    case "samsungs24" | "vivo23":
+        operating_system = "android"
+    case _:
+        operating_system = "unknown"
+print(f"The operating for the {device} is {operating_system}")
+
+
