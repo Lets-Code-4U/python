@@ -83,3 +83,90 @@ def remove_zeros(data):
 
 test_list = [10, 0, 25, 0, 42]
 print(remove_zeros(test_list))
+
+
+
+
+# Function Arguments
+# There are exactly 4 unique ways to pass data into function arguments
+
+#  1. Required Arguments: if we define a function with two paremeters we must pass exactly two values while calling it
+
+
+def average(a, b):
+    print((a + b) / 2)
+
+
+average(4, 6)
+# average(4)     This will crash an error: 1 argument is missing
+
+# 2. Default Arguments: we use = sign to assign default values to the paremeters
+# if we miss to pass the enough arguments the default values will be considered
+
+
+def average(a=8, b=9):
+    print((a + b) / 2)
+
+
+average()  # it will use default values (8,9)
+average(9, 12)  # it will overwrite the default values
+average(
+    6
+)  # it will overwrite the first default by 6 and consider the second value as 9
+
+
+# 3. Keyword Arguments: Usually python matches arguments based on positions
+#  we state wihich value goes to which variable during the call
+
+
+def average(a, b):
+    print((a + b) / 2)
+
+
+average(b=23, a=12)  # The position does not matter when stated explictly
+
+
+# 4. Variable length Arguments : operaters * and ** allow the function to accept any number of inputs
+
+# Arbitary Positional Arguments : if we put single * before any parameter name,
+# python bundles all the incoming paramenters into read only list called 'Tuple'
+# we can pass any number of arguments seamlessly
+
+
+def average(*number):
+    total = 0
+    for num in number:
+        total = total + num
+    return total / len(number)
+
+
+average(12, 34, 5, 67)  # we can pass any number of arguments
+average(1, 32, 43, 56, 78, 90)
+
+
+# Keyword Argument: if we add double ** before paremeter name,
+# pyhton maps the arguments into key-value elementcalled "Dictionary"
+
+
+def greet_user(**name):
+    print("Hello,", name["first_name"], name["last_name"])
+
+
+greet_user(first_name="Sarvesh", last_name="Mishra")
+
+
+# Define a function called describe_pet.
+# It should take two arguments: pet_name and animal_type.
+# Make animal_type have a default value of "Dog".
+# Inside the function, print a sentence like: f"{pet_name} is a {animal_type}".
+# Call the function once providing only a name (e.g., describe_pet("Buddy")).
+# Call the function a second time using keyword arguments to swap the positions entirely
+# (e.g., specifying animal_type="Cat" first, and pet_name="Whiskers" second).
+
+
+def describe_pet(pet_name, animal_type="Dog"):
+    print(f"{pet_name} is a {animal_type}")
+
+
+describe_pet("Buddy")
+describe_pet(animal_type="Cat", pet_name="Whiskers")
