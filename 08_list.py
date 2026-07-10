@@ -49,3 +49,48 @@ list2 = [i * i for i in range(12) if i % 2 == 0]
 print(list2)
 
 
+# List methods
+
+list = [10, 20, 20, 30, 40, 20, 50, 60, 70]
+
+list.append(75)  # inserts the given value at the end of the list
+print(list)
+
+list.sort()  # sorts list in ascending order
+print(list)
+
+list.sort(reverse=True)  # sorts list in decending order
+print(list)
+
+list.reverse()  # flips the list from original to backward order (like U turn)
+print(list)
+
+print(list.index(30))  # returns the index of the value passed
+print(
+    list.count(20)
+)  # scans the list and returns the number of times the value has appeared in the list
+
+list.insert(3, 30)  # list.insert(index,vlaue)  inserts the value at given index
+print(list)
+
+list2 = [15, 25, 35, 45, 55]
+list.extend(list2)
+# modifies the list by adding all the elements of list2 to end of the list
+print(list)
+
+k = list + list2
+# it leaves both the lsits untouched and creates a new list with all elements of both list
+print(k)
+
+c = list.copy()  # copies list l to a variable c the original list remains untouched
+print(c)
+
+
+l = [1, 2, 3, 4, 5]
+
+m = l
+# the variable m is not the copy of list l
+# m is the reference of l means any changes made to m will also be reflected in l and vice-versa
+m.append(6)  # 6 eill be appended to l also
+print(l)
+print(m)
