@@ -27,3 +27,30 @@ print(f"We are learning f-strings like: {{{name}}}")  # considers {name} as vari
 
 print(f"Math : {2*3}")
 print(f"Transform : {'test' .upper()}")
+
+
+# Docstrings(Document Strings) in python
+# Docstrings are string literals that are used to document fumctions, classes, parameters and returns
+# They describe technical purpose of the block.
+# Note: There is a strict condition that, the string literal should be just below the function/class ('def' line) definition
+# not even a single line of code should be between string literal and the function definition not even comments
+
+
+def square(num):
+    """This function takes a number num,and squares it"""
+    print(num**2)
+
+
+square(5)
+print(square.__doc__)
+
+
+def sum(a, b):
+    print(a, b)
+    """This function does the sum of two numbers"""
+    return a + b
+
+
+print(sum(5, 8))
+print(sum.__doc__)
+# will print NONE because the print line is between the fun definition and docstring
